@@ -1,0 +1,11 @@
+<div class="form-group">
+	<label [for]="Name">Name</label>
+	<input required #templatInputRef="ngModel" type="text" class="form-control"
+              [id]="inputId" [name]="inputName"  [(ngModel)]="vname" (keyup)="onChange(templatInputRef)">
+              {{vname}}
+	<div class="alert alert-danger" [hidden]="templatInputRef.valid || templatInputRef.pristine">
+		Name is required
+	</div>
+</div>
+<hr>
+<!--  <input type="checkbox" [(ngModel)]="chk" required name="chk"> -->

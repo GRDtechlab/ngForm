@@ -1,13 +1,25 @@
 <app-login></app-login>
-<hr>
-<form #heroForm="ngForm" class="container" (ngSubmit)="onSubmitValidator(heroForm.value)">
-    <div id="parent" *ngFor="let i of [0,1,2]" >
-       <app-child [id]="i+1" [name]="i+1" ></app-child>
-    </div>
-    <hr>
-    {{heroForm.value | json}}
-    <hr>
-    <div>
+<hr />
+<form
+  #heroForm="ngForm"
+  class="container"
+  (ngSubmit)="onSubmitValidator(heroForm.value)"
+>
+  <div id="parent" *ngFor="let i of [0, 1, 2]">
+    <app-child [id]="i + 1" [name]="i + 1"></app-child>
+  </div>
+  <hr />
+  {{ heroForm.value | json }}
+  <hr />
+  <div>
+    <app-button-submit></app-button-submit>
+  </div>
+</form>
+
+<form #addressFrom="ngForm">
+  <h3>New Form</h3>
+  <div>
+    <app-child [id]="1" [name]="1"></app-child>
+  </div>
   <app-button-submit></app-button-submit>
-</div>
 </form>
